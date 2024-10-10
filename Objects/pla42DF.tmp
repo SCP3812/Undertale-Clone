@@ -15,4 +15,3 @@ shape = SubResource("RectangleShape2D_o2pje")
 [node name="Tedk" type="Sprite2D" parent="."]
 texture = ExtResource("2_g6hrp")
 hframes = 4
-frame = 3

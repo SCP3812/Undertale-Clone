@@ -1,5 +1,5 @@
 extends CharacterBody2D
-@onready var TedK: Sprite2D = get_node("Tedk")
+@onready var tedk = $Tedk
 
 const SPEED = 300.0
 
@@ -15,8 +15,11 @@ func _physics_process(delta: float) -> void:
 	velocity.x = directionx * SPEED
 	velocity.y = directiony * -SPEED
 	if Input.is_action_just_pressed("ui_left") == true:
-
+		tedk.set_frame(3)
 	elif Input.is_action_just_pressed("ui_right") == true:
+		tedk.set_frame(2)
 	elif Input.is_action_just_pressed("ui_up") == true:
+		tedk.set_frame(1)
 	elif Input.is_action_just_pressed("ui_down") == true:
+		tedk.set_frame(0)
 	move_and_slide()
