@@ -3,16 +3,16 @@
 [ext_resource type="Script" path="res://Scripts/player_character.gd" id="1_7643a"]
 [ext_resource type="Texture2D" uid="uid://4de7m2refes" path="res://Assets/tedk.png" id="2_g6hrp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o2pje"]
-size = Vector2(16, 32)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_85hbx"]
+radius = 7.0
+height = 32.0
 
 [node name="playerCharacter" type="CharacterBody2D"]
 script = ExtResource("1_7643a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_o2pje")
+shape = SubResource("CapsuleShape2D_85hbx")
 
 [node name="Tedk" type="Sprite2D" parent="."]
 texture = ExtResource("2_g6hrp")
 hframes = 4
-frame = 3

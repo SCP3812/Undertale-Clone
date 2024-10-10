@@ -1,7 +1,7 @@
 extends CharacterBody2D
 @onready var tedk = $Tedk
 
-const SPEED = 300.0
+const SPEED = 250.0
 
 
 func _physics_process(delta: float) -> void:

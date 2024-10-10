@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://uo2tacpjader"]
+
+[ext_resource type="Texture2D" uid="uid://4nmtc8aiex6j" path="res://Assets/dr. soychild.png" id="1_b8rni"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_33wa0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mmpq6"]
+radius = 6.0
+height = 32.0
+
+[node name="soychild" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_33wa0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_mmpq6")
+
+[node name="Dr_Soychild" type="Sprite2D" parent="."]
+texture = ExtResource("1_b8rni")
