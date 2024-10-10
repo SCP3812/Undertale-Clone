@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+@onready var TedK: Sprite2D = get_node("Tedk")
 
 const SPEED = 300.0
 
@@ -12,6 +12,11 @@ func _physics_process(delta: float) -> void:
 	var directionx = Input.get_axis("ui_left", "ui_right")
 #	print(directionx)
 	var directiony = Input.get_axis("ui_down", "ui_up")
-	velocity.x = directionx * -SPEED
-	velocity.y = directiony * SPEED
+	velocity.x = directionx * SPEED
+	velocity.y = directiony * -SPEED
+	if Input.is_action_just_pressed("ui_left") == true:
+
+	elif Input.is_action_just_pressed("ui_right") == true:
+	elif Input.is_action_just_pressed("ui_up") == true:
+	elif Input.is_action_just_pressed("ui_down") == true:
 	move_and_slide()
