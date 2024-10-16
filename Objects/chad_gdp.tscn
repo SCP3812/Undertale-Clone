@@ -1,0 +1,125 @@
+[gd_scene load_steps=18 format=3 uid="uid://blxl67db2642e"]
+
+[ext_resource type="Texture2D" uid="uid://bnd18c6vtc5xo" path="res://Assets/chad-gdp-beest (1).png" id="1_2g1v5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0t80u"]
+atlas = ExtResource("1_2g1v5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxa2j"]
+atlas = ExtResource("1_2g1v5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1xo7"]
+atlas = ExtResource("1_2g1v5")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwro3"]
+atlas = ExtResource("1_2g1v5")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6ar6"]
+atlas = ExtResource("1_2g1v5")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lydut"]
+atlas = ExtResource("1_2g1v5")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_echwk"]
+atlas = ExtResource("1_2g1v5")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4madf"]
+atlas = ExtResource("1_2g1v5")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mwf7"]
+atlas = ExtResource("1_2g1v5")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gmoe"]
+atlas = ExtResource("1_2g1v5")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wm6ap"]
+atlas = ExtResource("1_2g1v5")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_df8cl"]
+atlas = ExtResource("1_2g1v5")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gv1s"]
+atlas = ExtResource("1_2g1v5")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jaad"]
+atlas = ExtResource("1_2g1v5")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtv7e"]
+atlas = ExtResource("1_2g1v5")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qrq38"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0t80u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxa2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1xo7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwro3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r6ar6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lydut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_echwk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4madf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mwf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gmoe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wm6ap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_df8cl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gv1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jaad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtv7e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="ChadGDP" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qrq38")
+frame_progress = 0.79439
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -4, 0, -8, -4, -10, -6, -10, -5, -3, -3, 1, -3, 5, -4, 6, -4, 11, -3, 16, 3, 16, 4, 11, 4, 6, 3, 5, 3, 1, 5, -3, 6, -10, 4, -10, 0, -8)

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://i0usbr6pjouh"]
+
+[ext_resource type="Texture2D" uid="uid://bbxdgvd111s5d" path="res://Assets/Horaious (4).png" id="1_15n7f"]
+
+[node name="Horaious" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, -14.7927)
+scale = Vector2(1, 1.79616)
+polygon = PackedVector2Array(0, -9.58, -5, -9.58, -8, -7.35303, -8, -0.672132, -12, 0.998093, -16, 22.1543, -8, 26.0515, 0, 26.0515, 8, 26.0515, 16, 22.1543, 12, 0.998093, 8, -0.672132, 8, -7.35303, 5, -9.58)
+
+[node name="Horaious(4)" type="Sprite2D" parent="."]
+texture = ExtResource("1_15n7f")
