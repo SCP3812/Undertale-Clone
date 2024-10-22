@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://uo2tacpjader"]
+[gd_scene load_steps=5 format=3 uid="uid://bhc2ef10njvrp"]
 
 [ext_resource type="Texture2D" uid="uid://4nmtc8aiex6j" path="res://Assets/dr. soychild.png" id="1_b8rni"]
 
@@ -8,11 +8,38 @@
 radius = 6.0
 height = 32.0
 
+[sub_resource type="GDScript" id="GDScript_5uj2d"]
+script/source = "extends Area2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_area_entered(area: Area2D) -> void:
+	DialogueManager.show_example_dialogue_balloon(load(\"res://dialogue/soychild.dialogue\"), \"soychild\")
+"
+
 [node name="soychild" type="StaticBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_33wa0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_mmpq6")
 
+[node name="Area2D" type="Area2D" parent="."]
+script = SubResource("GDScript_5uj2d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1.3, 1.3)
+shape = SubResource("CapsuleShape2D_mmpq6")
+
 [node name="Dr_Soychild" type="Sprite2D" parent="."]
 texture = ExtResource("1_b8rni")
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
