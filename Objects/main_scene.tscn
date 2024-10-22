@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ddwit0wkrvah2" path="res://Assets/Pixilart Sprite Sheet.png" id="1_ypcah"]
 [ext_resource type="PackedScene" uid="uid://ek32jabh31ph" path="res://Objects/player_character.tscn" id="2_vh4xi"]
 [ext_resource type="PackedScene" uid="uid://uo2tacpjader" path="res://Objects/soychild.tscn" id="3_gg45y"]
+[ext_resource type="PackedScene" uid="uid://bqn3be6pgd43h" path="res://Objects/massicator.tscn" id="4_dcpeh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rb64y"]
 texture = ExtResource("1_ypcah")
@@ -52,8 +53,6 @@ texture = ExtResource("1_ypcah")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_rb64y")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_sfoon"]
-
 [node name="MainScene" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -69,7 +68,5 @@ zoom = Vector2(6, 6)
 [node name="soychild" parent="." instance=ExtResource("3_gg45y")]
 position = Vector2(335, -50)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("CircleShape2D_sfoon")
+[node name="massicator" parent="." instance=ExtResource("4_dcpeh")]
+position = Vector2(186, -119)

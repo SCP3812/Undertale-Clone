@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://bqn3be6pgd43h"]
+[gd_scene load_steps=10 format=3 uid="uid://bqn3be6pgd43h"]
 
+[ext_resource type="Script" path="res://Scripts/massicator.gd" id="1_iv86c"]
 [ext_resource type="Texture2D" uid="uid://b0jtomfm5np5a" path="res://Assets/Pixilart Sprite Sheet (7) (1).png" id="1_q1lj5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xmpst"]
@@ -49,6 +50,7 @@ animations = [{
 size = Vector2(32, 64)
 
 [node name="massicator" type="CharacterBody2D"]
+script = ExtResource("1_iv86c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ou6ur")
