@@ -69,4 +69,4 @@ zoom = Vector2(6, 6)
 position = Vector2(335, -50)
 
 [node name="massicator" parent="." instance=ExtResource("4_dcpeh")]
-position = Vector2(-138, 41)
+position = Vector2(196, 177)
