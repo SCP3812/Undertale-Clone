@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://evc5f710qc4r"]
+[gd_scene load_steps=7 format=4 uid="uid://evc5f710qc4r"]
 
 [ext_resource type="Texture2D" uid="uid://ddwit0wkrvah2" path="res://Assets/Pixilart Sprite Sheet.png" id="1_ypcah"]
 [ext_resource type="PackedScene" uid="uid://bvxxd40x61syn" path="res://Objects/player_character.tscn" id="2_a46om"]
 [ext_resource type="PackedScene" uid="uid://bhc2ef10njvrp" path="res://Objects/soychild.tscn" id="3_k744q"]
+[ext_resource type="Script" path="res://Objects/soychild.gd" id="4_7ovko"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rb64y"]
 texture = ExtResource("1_ypcah")
@@ -64,3 +65,4 @@ position = Vector2(49, 1)
 [node name="Camera2D" type="Camera2D" parent="playerCharacter"]
 
 [node name="soychild" parent="." instance=ExtResource("3_k744q")]
+script = ExtResource("4_7ovko")

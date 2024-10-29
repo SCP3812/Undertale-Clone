@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 250.0
 
-
+@onready var resource = load("res://dialogue/soychild.dialogue")
 func _physics_process(delta: float) -> void:
 
 
@@ -23,3 +23,7 @@ func _physics_process(delta: float) -> void:
 	elif Input.is_action_just_pressed("move_down") == true:
 		tedk.set_frame(0)
 	move_and_slide()
+
+
+#	func _on_area_2d_dialogue_signal():
+#		DialogueManager.show_example_dialogue_balloon(resource, "soychild")

@@ -11,7 +11,7 @@ height = 32.0
 [sub_resource type="GDScript" id="GDScript_5uj2d"]
 script/source = "extends Area2D
 
-
+signal dialogueSignal
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
-	DialogueManager.show_example_dialogue_balloon(load(\"res://dialogue/soychild.dialogue\"), \"soychild\")
+	dialogueSignal.emit()
 "
 
 [node name="soychild" type="StaticBody2D"]
